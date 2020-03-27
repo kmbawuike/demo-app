@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>ALDDN - Monitoring & Evaluation Portal</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/alddn_logo.png"/>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <!-- <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard/dash_2.css" rel="stylesheet" type="text/css" /> -->
+    <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+
+</head>
+<body>
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container fixed-top">
+        <header class="header navbar navbar-expand-sm">
+
+            <ul class="navbar-item theme-brand flex-row  text-center">
+                <li class="nav-item theme-logo">
+                    <a href="index.html">
+                    </a>
+                </li>
+                <li class="nav-item theme-text"><a href="index.html" class="nav-link"> ALDDN Monitoring & Evaluation Portal </a>
+                    
+                </li>
+                
+
+            </ul>
+
+
+            <ul class="navbar-item flex-row ml-md-auto">
+
+                <li class="nav-item dropdown user-profile-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="assets/img/usericon.png" alt="avatar">
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                        <div class="">
+                            <div class="dropdown-item">
+                                <a class="" href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> My Profile</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <a class="" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN NAVBAR  -->
+    <div class="sub-header-container">
+        <header class="header navbar navbar-expand-sm">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+            <ul class="navbar-nav flex-row">
+                <li>
+                    <div class="page-header">
+
+                        <nav class="breadcrumb-one" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Summary</span></li>
+
+                                <img src="assets/img/alddn_logo.png" class="" alt="ALDDN Logo" width="110px" height="50px"> 
+                            </ol>
+                        </nav>
+
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row ml-auto ">
+                <li class="nav-item more-dropdown">
+                    <img src="assets/img/bmgf-red.jpg" class="" alt="BMGF Logo" width="110px" height="50px">
+                    <img src="assets/img/sahel.png" class="" alt="Sahel Logo" width="200px" height="50px">
+            </ul>
+        </header>
+    </div>
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+        <div class="sidebar-wrapper sidebar-theme">
+            
+            <nav id="sidebar">
+                <div class="shadow-bottom"></div>
+
+                <ul class="list-unstyled menu-categories" id="accordionExample">
+                    <li class="menu">
+                        <a href="#dashboard" data-active="true" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                <span>Dashboard</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
+                            <li class="active">
+                                <a href="#"> Summary </a>
+                            </li>
+                            <li>
+                                <a href="results.html">Results </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#app" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg>
+                                <span>Indicators</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="app" data-parent="#accordionExample">
+                            <li>
+                                <a href="daily_indicators.html"> Daily Indicators</a>
+                            </li>
+                            <li>
+                                <a href="monthly_indicators.html"> Monthly Indicators </a>
+                            </li>
+
+                            <li>
+                                <a href="quarterly_indicators.html"> Quarterly Indicators </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu">
+                        <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                                <span>Forms</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
+                            <li>
+                                <a href="eaforms.html"> EA Forms </a>
+                            </li>
+                            <li>
+                                <a href="chwforms.html"> Community Health Workers</a>
+                            </li>
+                            <li> <a href="tsforms.html"> TechnoServe Form</a> </li>
+                            <li> <a href="sfcforms.html"> Sahel FC Forms </a> </li>
+                            <li> <a href="mpforms.html"> Milk Processor Forms </a> </li>
+                            <li> <a href="aiforms.html">AI Technician Forms </a> </li>
+                            <li> <a href="vetforms.html">Veterinarians Forms</a> </li>
+                            <li> <a href="agforms.html">Agridrive Form</a> </li>
+                            <li> <a href="policyform.html">Policy Advocacy Form</a> </li>
+                            <li> <a href="shgform.html">Self Help Group Form</a> </li>
+                            <li> <a href="coopform.html">Cooperatives Form</a> </li>
+                            <li> <a href="cowform.html">Cow Form</a> </li>
+                            <li> <a href="calf_form.html">Calf Form</a> </li>
+                            <li> <a href="heiferform.html">Heifer Form</a> </li>
+                        </ul>
+                    </li>
+
+
+                   
+                    
+                    <li class="menu">
+                        <a href="#users" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                <span>Users</span>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="users" data-parent="#accordionExample">
+                            <li><a href="farmers.html"> Farmers </a></li>
+                            <li><a href="extensionagents.html"> Extenstion Agents </a></li>
+                            <li><a href="chw.html"> Community Health Worker</a></li>
+                            <li><a href="animalhealth_ai.html"> Animal Health (AI Tech)</a></li>
+                            <li><a href="animalhealth_vet.html"> Animal Health (Vet)</a></li>
+                            <li><a href="commfodder.html"> Comm. Fodder Producers </a></li>
+                            <li><a href="milkprocessor.html"> Milk Processor Operator </a></li>
+                            <li><a href="milkoperator.html"> Milk Procesor Manager</a></li>
+                            <li><a href="technoserve.html"> TechnoServe </a></li>
+                            <li><a href="bmgf.html"> BMGF </a></li>
+                            <li><a href="agridrive.html"> Agridrive </a></li>
+                            <li><a href="sahelfc.html"> Sahel Feild Coordinators </a></li>
+                            <li><a href="sahelfm.html"> Sahel Field Managers </a></li>
+                            <li><a href="pmo.html"> Sahel Project MGT Office </a></li>
+                        </ul>
+                     
+                    </li>
+
+                
+
+                    <li class="menu">
+                        <a href="profile.html" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                <span>Profile</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+
+        </div>
+        <!--  END SIDEBAR  -->
+   
+
+        <!--  BEGIN CONTENT PART  -->
+        <div id="content" class="main-content">
+            <br/> <br/> <br/>
+            <div class="layout-px-spacing">
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Number of Beneficiaries</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">200,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/group.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+  
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Boreholes Built</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">75</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/hand-wash.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Self Help Groups</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">1,500</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/hand-shake.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!--2nd row-->
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Trainees</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">120,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/training.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+  
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Milk Cans Distributed</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">15,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/milk-tank.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Vets/AITs engaged and trained</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">50</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/veterinarian.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+<!---3rd row-->
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Litres of milk collected per day</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">190,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/cow-silhouette.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+  
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Cows Inseminated</h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">8,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/hand-wash.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                        <div class="widget widget-one">
+                            <div class="widget-heading">
+                                <h6 class="">Tons of feeds produced   </h6>
+                            </div>
+                            <div class="w-chart">
+                                <div class="w-chart-section">
+                                    <div class="w-detail">
+                                        <p class="w-stats">80,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="w-chart-section">
+                                    <img src="assets/img/leaf.svg" width="100" height="100"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="footer-wrapper">
+                <div class="footer-section f-section-1">
+                    <p class="">Copyright © 2020 ALDDN, All rights reserved.</p>
+                </div>
+                <div class="footer-section f-section-2">
+                    <p class="">Developed with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by <a href="http://tenstutors.com"> TENS Global Systems Limited</a></p>
+                </div>
+            </div>
+        </div>
+        <!--  END CONTENT PART  -->
+
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="plugins/apex/apexcharts.min.js"></script>
+    <script src="assets/js/dashboard/dash_2.js"></script>
+    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+</body>
+</html>
